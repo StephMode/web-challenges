@@ -1,0 +1,19 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--body-bg);
+}
+
+/* put list styling here to make it global */
+ul {
+  padding: 0;
+  list-style: none;
+}
