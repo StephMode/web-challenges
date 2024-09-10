@@ -23,6 +23,12 @@ Make sure that everything still looks the same as before.
 
 Switch to the `./css/styles.css` file create some custom properties!
 
+Arbeitsschritte:
+
+1. :root mit custom props erstellen
+2. alle farb values mit var() ersetzen
+3. noch ein, zwei andere erstellen
+
 ## Bonus
 
 Check the stylesheet for other values that might warrant extraction. One example may be the border radius of `4px`. But you might find other things, too like letter spacing, spaces (8px, 16px, 32px), etc..
