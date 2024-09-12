@@ -1,0 +1,143 @@
+/* ==[ PLAYGROUND Challenge! ]== */
+
+/* This challenge includes several smaller challenges and allows you to
+play around with the concepts you've learned. Read the instructions 
+carefully. */
+
+:root {
+  /* Color Variables */
+
+  --color-nemo: #ff4a11;
+  --color-granite: #252629;
+  --color-water-10: #f3f5f9;
+  --color-foam: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+
+  background-color: var(--color-foam);
+}
+
+h1 {
+  font-size: 3rem;
+  width: 80%;
+  margin: 20px auto;
+  color: var(--color-nemo);
+  text-shadow: 4px 4px var(--color-granite);
+}
+
+.playground {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  gap: 30px;
+
+  width: 80%;
+  min-height: 100vh;
+}
+
+.section {
+  width: 100%;
+  background-color: var(--color-water-10);
+  padding: 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.box--one {
+  background-color: lightblue;
+
+  /* need % value for width here */
+  width: 40%;
+  height: 100px;
+}
+
+.box--two {
+  background-color: lightgreen;
+  /* we need 2 media queries for defined breakpoints here */
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (min-width: 600px) {
+  .box--two {
+    background-color: lightgreen;
+    width: 200px;
+    height: 100px;
+  }
+}
+
+/* note, that we don't need to repeat all the declarations in media queries for one class, only the ones that we need to change need to be mentioned here */
+
+@media screen and (min-width: 1200px) {
+  .box--two {
+    width: 400px;
+  }
+}
+
+.box--three {
+  background-color: lightpink;
+  /* we need 
+  1 media query for breakpoint "landscape"
+  diffrent values for width and height
+  */
+  width: 50px;
+  height: 250px;
+}
+
+@media screen and (orientation: landscape) {
+  .box--three {
+    background-color: lightpink;
+
+    /* option flipped
+    width: 250px;
+    height: 50px; */
+
+    /* option flat: */
+    width: 80%;
+    height: 1%;
+  }
+}
+
+.box--four {
+  background-color: lightgray;
+
+  /* we need
+  1 media query for breakpoint "dark-mode
+  diffrent value for bcg
+  */
+
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .box--four {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.box--five {
+  width: 100%;
+}
+
+.box--five img {
+  width: 100%;
+}
