@@ -13,6 +13,8 @@ We want to add some functionality to the buttons on this page. When pressing a b
   3: Use the two functions in the event listeners of the buttons to color in the box when the button is clicked.
 */
 
+// ⭐️ Key take away: viel zu komplex gedacht (Stichwort "class as parameter"), einfach erstmal umsetzen, was gefragt wird
+
 /*
 How to approach
   1. Take inspo from the darkmode button challenge
@@ -71,6 +73,16 @@ grayButton.addEventListener("click", () => {
 function removeAllColors() {
   box.classList.remove("gray", "red", "blue", "green");
 }
+
+/* Alternative: bei Benjamin gesehen:
+
+function removeAllColors() {
+	box.className = "box";
+}
+
+damit weißt man der box einfach nur die class .box zu und sonst nix
+
+*/
 
 // 💡 sobald ich einen Parameter als string hinzufüge (egal welchen!), nimmt verändert das element on event die Farbe wie beabsichtigt
 function addColor(color) {
