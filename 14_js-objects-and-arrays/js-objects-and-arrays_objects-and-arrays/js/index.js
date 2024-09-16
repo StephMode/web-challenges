@@ -7,7 +7,7 @@ const people = [
     parents: { mothersName: "Mona", fathersName: "Abe" },
     pet: { animal: "dog", name: "Santa's Little Helper" },
     friend: { name: "Moe Szyslak", work: "owner of Moes Tavern" },
-    other_friends: ["Barney Gumble", "Carl Carlson", "Lenny Leonard"],
+    "other friends": ["Barney Gumble", "Carl Carlson", "Lenny Leonard"],
     color_cloth: "white",
   },
   {
@@ -56,7 +56,8 @@ console.log(nameOfFirstPerson);
 // EXERCISE 2
 // Change the value of the variable homersOtherFriends to equal the other friends of Homer.
 
-const homersOtherFriends = people[0].other_friends;
+const homersOtherFriends = people[0]["other friends"];
+// das ist ein gutes Beispiel dafür, wann man zwingend die Klammer-notation verwenden muss!
 console.log(homersOtherFriends);
 
 // EXERCISE 3
