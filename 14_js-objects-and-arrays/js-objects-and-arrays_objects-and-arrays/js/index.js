@@ -58,6 +58,7 @@ console.log(nameOfFirstPerson);
 
 const homersOtherFriends = people[0]["other friends"];
 // das ist ein gutes Beispiel dafür, wann man zwingend die Klammer-notation verwenden muss!
+// weil .notation nur für valide keys in objects verwendet werden kann, das sind strings Sonderzeichen wie " " ("_" und "$" sind keine Sonderzeichen)
 console.log(homersOtherFriends);
 
 // EXERCISE 3
