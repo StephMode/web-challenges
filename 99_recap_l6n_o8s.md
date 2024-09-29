@@ -20,14 +20,12 @@ Process:
 Template for l6n o8s chapters
 
 _My summary:_
-lipsum
+Summary goes here…
 
 _revised_:
 
-A function
+Revised summary goes here…
 
 _Keywords_:
 
-- a
-- b
-- c
+- Keywords go here
