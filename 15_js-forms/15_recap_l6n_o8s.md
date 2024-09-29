@@ -151,9 +151,21 @@ _My summary:_
 
 _revised_:
 
-The event when a user inputs data into the input field (HTML element) according to the type of the input field.
+You can focus an input field with the .focus() method. This can be used to improve the user experience after submitting a form.
+
+```JS
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  // [...] handle form data
+  event.target.elements.message.focus();
+});
+```
 
 _Keywords_:
+
+- focus() method
+- Programmatically setting focus
+- UX enhancement
 
 ### knowing how to reset a form
 
@@ -161,6 +173,18 @@ _My summary:_
 
 _revised_:
 
-A function
+You can reset all form fields to their default value with the .reset() method.
+
+```JS
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  // [...] handle form data
+  event.target.reset();
+});
+```
 
 _Keywords_:
+
+- Form reset
+- .reset() method
+- Clearing form fields
