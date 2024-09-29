@@ -51,6 +51,7 @@ form.addEventListener("submit", (event) => {
   } else {
     result = divide(numberA, numberB);
   }
+ 
 
 */
 
