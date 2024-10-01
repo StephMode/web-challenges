@@ -4,10 +4,12 @@ import "./styles.css";
 export default function App() {
   return (
     <main>
-      <Button>{"toggle"}</Button>
-      <Button>{"rotation"}</Button>
-      <Button>{"color change"}</Button>
-      <Button>{"border radius"}</Button>
+      <Button>toggle</Button>
+      <Button>rotation</Button>
+      <Button>color change</Button>
+      <Button>border radius</Button>
+      {/* das hier ist quasi wie das argum beim call der comp */}
+      {/* <Button>{"border radius"}</Button> // hatte ich urspr. so geschrieben, ist dann also ein JS Element, brauche ich hier nicht */}
     </main>
   );
 }
@@ -15,11 +17,11 @@ export default function App() {
 function Button({ children }) {
   return (
     <button className="button" type="button">
-      {children}
+      Button for {children}
     </button>
   );
 }
 
-function ButtonText({ tag }) {
-  return <div>Button for {tag}</div>;
-}
+// function ButtonText({ tag }) {
+//   return <div>Button for {tag}</div>;
+// } // habe ich gar nicht gebraucht
