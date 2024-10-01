@@ -1,14 +1,19 @@
 import "./styles.css";
 
 export default function App() {
-  return <Greeting name="Esraa" />;
+  return (
+    <div>
+      <Greeting name="Esraa" />
+      <Greeting name="Roland" />
+    </div>
+  );
 }
 
 const coachName = "Esraa";
 
 function Greeting({ name }) {
-  return <h1>Hello {name === coachName ? "Coach" : `${name}`} !</h1>; //
-  // return <h1>Hello {name}!</h1>; // standard return based upon prop input by App
+  // return <h1>Hello {name === coachName ? "Coach" : `${name}`} !</h1>; //
+  return <h1>Hello {name}!</h1>; // standard return based upon prop input by App
 }
 
 /* Part 2: Conditional Rendering w/ coach names
