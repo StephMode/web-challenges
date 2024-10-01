@@ -24,6 +24,8 @@ _revised_:
 
 A loop is a control structure that repeatedly executes a block of code as long as a specified condition is true or until a specification criterion is met.
 
+It's a statement and a component of JavaScript. It can be statement of a function.
+
 _Keywords_:
 
 - control structure
