@@ -10,3 +10,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+// hier könnte man statt divs auch sematische abschnitt elements verwenden
