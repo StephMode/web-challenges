@@ -1,6 +1,7 @@
 import React from "react";
 import { volumes } from "@/lib/data";
 import Link from "next/link";
+import Image from "next/image";
 
 function VolumeDetail() {
   const volumeIndex = volumes.findIndex(
@@ -12,11 +13,24 @@ function VolumeDetail() {
   const { title, description, cover, books } = volume;
 
   return (
-    <main>
+    <>
       <Link href="/volumes">All Volumes</Link>
       <h1>{title}</h1>
       <p>{description}</p>
-    </main>
+      <ul>
+        {books.map(({ ordinal, title }) => (
+          <li key={title}>
+            {ordinal}: <strong>{title}</strong>
+          </li>
+        ))}
+      </ul>
+      <Image
+        src={cover}
+        alt={`Cover image of ${title}`}
+        width={140}
+        height={230}
+      ></Image>
+    </>
   );
 }
 

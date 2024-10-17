@@ -6,9 +6,14 @@ export default function Navigation() {
     <>
       <h1>All Volumes</h1>
       <p>{introduction}</p>
-      <Link href="/volumes/the-fellowship-of-the-ring" title="Fellowship">
-        Fellowship of the Bling
-      </Link>
+      <ul>
+        <Link href="/volumes/the-fellowship-of-the-ring" title="Fellowship">
+          Fellowship of the Bling
+        </Link>
+        <Link href="/volumes/the-two-towers" title="Towers">
+          The two towers
+        </Link>
+      </ul>
     </>
   );
 }
