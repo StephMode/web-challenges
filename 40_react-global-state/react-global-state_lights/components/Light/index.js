@@ -18,7 +18,7 @@ export default function Light({ name, lights }) {
     >
       <Icon $isOn={isOn}>💡</Icon>
       <Text>
-        <Name>{lights.name}</Name>
+        <Name>{name}</Name>
         <State>{isOn ? "On" : "Off"}</State>
       </Text>
     </LightButton>

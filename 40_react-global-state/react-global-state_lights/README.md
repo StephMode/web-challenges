@@ -37,8 +37,11 @@ In this challenge you will automate the lights in your house… well, at least i
   - [✅] make the Light comp work with the data of the sate
 
 - Change the `Lights` component to render the lights dynamically based on the array in state (`.map`). You'll need to pass the array down through props.
-  _My notes_: the Light comp needs to receive the lights state
-  _Action Items_:
+  _My notes_:
+
+  - Light needs to render based on mapping the lights state to make use of the prop
+  - Hence, we also shouldn't need the ul in Lights anymore,
+    _Action Items_:
 
   - [✅] set up prop structure so that the state gets drilled down
 
