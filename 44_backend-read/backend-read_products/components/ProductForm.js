@@ -1,32 +1,51 @@
+import styled from "styled-components";
+
 export default function ProductForm({ onSubmit, formType }) {
   return (
-    <form onSubmit={onSubmit}>
-      {formType === "Add" ? <h2>Add a new Fish</h2> : ""}
-      <label htmlFor="name">
+    <StyledForm onSubmit={onSubmit}>
+      {formType === "Add" ? <StyledHeading>Add a new Fish</StyledHeading> : ""}
+      <StyledLabel htmlFor="name">
         Name:
         <input type="text" id="name" name="name"></input>
-      </label>
-      <label htmlFor="description">
+      </StyledLabel>
+      <StyledLabel htmlFor="description">
         Description:
         <input type="text" id="description" name="description"></input>
-      </label>
-      <label htmlFor="price">
+      </StyledLabel>
+      <StyledLabel htmlFor="price">
         Price:
         <input type="number" id="price" name="price"></input>
-      </label>
-      <label htmlFor="currency">
+      </StyledLabel>
+      <StyledLabel htmlFor="currency">
         Currency:
         <select id="currency" name="currency">
           <option value="EUR">EUR</option>
           <option value="USD">USD</option>
           <option value="GBP">GBP</option>
         </select>
-      </label>
+      </StyledLabel>
 
       <button type="submit">{formType} Product</button>
-    </form>
+    </StyledForm>
   );
 }
+
+export const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`;
+
+export const StyledHeading = styled.h2`
+  text-align: center;
+  color: var(--color-nemo);
+`;
+
+export const StyledLabel = styled.label`
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+`;
 
 /* Action Plan
 
