@@ -8,7 +8,7 @@ export default async function handler(request, response) {
     response.status(200).json(products);
     return;
   }
-  // implement the post route at the endpoint
+  // implement the POST route at the endpoint
   if (request.method === "POST") {
     try {
       const productData = request.body;
@@ -19,6 +19,7 @@ export default async function handler(request, response) {
       response.status(404).json({ error: error.message });
     }
   }
+
   response.status(404).json({ status: "Method not allowed" });
 }
 

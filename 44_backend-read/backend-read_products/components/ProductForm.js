@@ -1,32 +1,7 @@
-import useSWR from "swr";
-
-export default function ProductForm() {
-  const { mutate } = useSWR("/api/products/");
-
-  // submit handler
-  async function handleSubmit(event) {
-    event.preventDefault();
-
-    // collect data from the form and store them in an object
-    const formData = new FormData(event.target);
-    const productData = Object.fromEntries(formData);
-
-    // send the post request
-    const response = await fetch("/api/products/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(productData),
-    });
-    if (response.ok) {
-      mutate();
-    }
-  }
-
+export default function ProductForm({ onSubmit, formType }) {
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Add a new Fish</h2>
+    <form onSubmit={onSubmit}>
+      {formType === "Add" ? <h2>Add a new Fish</h2> : ""}
       <label htmlFor="name">
         Name:
         <input type="text" id="name" name="name"></input>
@@ -48,7 +23,7 @@ export default function ProductForm() {
         </select>
       </label>
 
-      <button type="submit">Add Product</button>
+      <button type="submit">{formType} Product</button>
     </form>
   );
 }

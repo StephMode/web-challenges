@@ -17,6 +17,21 @@ export default async function handler(request, response) {
     response.status(200).json(product);
     return;
   }
+  // implement a PUT route at the endpoint
+  if (request.method === "PUT") {
+    const productData = request.body;
+    // Get the product data from the request body
+    await Product.findByIdAndUpdate(id, productData);
+    // Find the product in the model using it's ID and the new data
+    return response.status(200).json({ status: "Updated" });
+    // Return an okay status on successful update
+  }
+  // implement a DELETE route at the endpoint
+  if (request.method === "DELETE") {
+    await Product.findByIdAndDelete(id);
+    // find and delete a specific product by it's ID
+    response.status(200).json({ status: `Product ${id} successfully deleted` });
+  }
   response.status(405).json({ status: "Method not allowed" });
 }
 

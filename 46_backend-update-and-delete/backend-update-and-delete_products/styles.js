@@ -24,14 +24,4 @@ export default createGlobalStyle`
     min-height: 100vh;
     max-width: 50rem;
   }
-
-  /* .form--container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    border: var(--color-nemo) solid 2px;
-    border-radius: 5px;
-    padding: 5px;
-  } */
 `;
