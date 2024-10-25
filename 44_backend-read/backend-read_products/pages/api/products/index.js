@@ -8,6 +8,17 @@ export default async function handler(request, response) {
     response.status(200).json(products);
     return;
   }
+  // implement the post route at the endpoint
+  if (request.method === "POST") {
+    try {
+      const productData = request.body;
+      await Product.create(productData);
+      response.status(201).json({ status: "Product created" });
+    } catch (error) {
+      console.log("error");
+      response.status(404).json({ error: error.message });
+    }
+  }
   response.status(404).json({ status: "Method not allowed" });
 }
 
